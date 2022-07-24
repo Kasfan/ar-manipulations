@@ -16,7 +16,7 @@ namespace ArManipulations.Manipulation
 		private Camera firstPersonCamera;
 		[SerializeField]
 		[Tooltip("A prefab to place when a raycast from a user touch hits a plane.")]
-		private GameObject pawnPrefab;
+		private GameObject spawnPrefab;
 		[SerializeField]
 		[Tooltip("Manipulator prefab to attach placed objects to.")]
 		private GameObject manipulatorPrefab;
@@ -28,10 +28,11 @@ namespace ArManipulations.Manipulation
 		private ARAnchorManager referencePointManager;
 
 		void Awake()
-		{
+		{	
 			sessionOrigin = GetComponent<ARSessionOrigin>();
 			raycastManager = FindObjectOfType<ARRaycastManager>();
 			planeManager = FindObjectOfType<ARPlaneManager>();
+			referencePointManager = FindObjectOfType<ARAnchorManager>();
 		}
 
 		protected override bool CanStartManipulationForGesture(TapGesture gesture) => gesture.TargetObject == null;
@@ -61,17 +62,15 @@ namespace ArManipulations.Manipulation
 				else
 				{
 					var manipulator = Instantiate(manipulatorPrefab, hit.pose.position, hit.pose.rotation);
-					var arObject = Instantiate(pawnPrefab, hit.pose.position, hit.pose.rotation);
+					var arObject = Instantiate(spawnPrefab, hit.pose.position, hit.pose.rotation);
 					arObject.transform.parent = manipulator.transform;
 					
-					sessionOrigin.MakeContentAppearAt(manipulator.transform, hit.pose.position);
 					var anchor = referencePointManager.AttachAnchor(planeManager.GetPlane(hit.trackableId), hit.pose);
 					manipulator.transform.parent = anchor.transform;
 
 					// Select the placed object for manipulations
 					manipulator.GetComponent<Manipulator>().Select();
 				}
-
 			}
 		}
 	}
