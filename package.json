@@ -1,0 +1,28 @@
+﻿{
+  "name": "com.kasfan.ar-manipulations",
+  "version": "1.0.0",
+  "displayName": "AR Manipulations",
+  "description": "This package adapts ARCore standard manipulations for ARFoundations as well as plane visualisation and plane discovery \n It supports both ARCore and ARKit.",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "documentationUrl": "https://github.com/Kasfan/ar-manipulations",
+  "changelogUrl": "https://github.com/Kasfan/ar-manipulations",
+  "licensesUrl": "https://github.com/Kasfan/ar-manipulations/blob/main/LICENSE",
+  "dependencies": {
+    "com.unity.xr.arcore": "4.1.10",
+    "com.unity.xr.arfoundation": "4.1.10",
+    "com.unity.xr.management": "4.0.7",
+    "com.unity.modules.xr": "1.0.0"
+  },
+  "keywords": [
+    "AR",
+    "ARFoundation",
+    "ARCore",
+    "ARKit"
+  ],
+  "author": {
+    "name": "Denis Slabko",
+    "email": "debug.start@gmail.com",
+    "url": "https://github.com/Kasfan"
+  }
+}
