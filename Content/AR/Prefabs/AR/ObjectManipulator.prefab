@@ -89,7 +89,7 @@ Transform:
   m_GameObject: {fileID: 8145154967004099498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4009151896191734}
   m_RootOrder: 1
@@ -219,7 +219,7 @@ Transform:
   m_GameObject: {fileID: 8145154967528361447}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4009151896191734}
   m_RootOrder: 0
@@ -315,8 +315,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1, z: 1.5}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 0.2, y: 0.1, z: 0.2}
+  m_Center: {x: 0, y: 0.05, z: 0}
 --- !u!1 &8145154967929755012
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 8145154967929755008}
   - component: {fileID: 8145154967929755009}
   m_Layer: 0
-  m_Name: SpawnObject
+  m_Name: ObjectManipulator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MinScale: 0.3
-  MaxScale: 1.5
+  MaxScale: 5
 --- !u!114 &8145154967929755039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035bca4b574dc4a2a8d83b85d750c600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectTranslationMode: 0
+  ObjectTranslationMode: 2
   MaxTranslationDistance: 10
 --- !u!114 &8145154967929755008
 MonoBehaviour:
