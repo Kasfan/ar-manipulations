@@ -1,4 +1,4 @@
-﻿#AR manipulations
+﻿# AR manipulations
 This package is an adaptation of the
 [arcore-unity-sdk](https://github.com/google-ar/arcore-unity-sdk/tree/master/Assets/GoogleARCore/Examples)
 example AR setup for ARFoundation.
